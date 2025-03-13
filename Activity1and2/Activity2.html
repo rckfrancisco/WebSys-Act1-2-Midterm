@@ -45,14 +45,24 @@ DOM.</p>
  
     <button id="highlight-important" onclick="changeText()">Highlight Important Text</button> 
  
-    <script> 
+    <script>
         function changeText() {
             document.getElementById("main-title").innerText = "Exploring the Power of DOM Manipulation";
-
-            let paragraphs = document.getElementsClassName("post-paragraph");
+    
+            let paragraphs = document.getElementsByClassName("post-paragraph");
             let count = paragraphs.length;
-            console.log("The number of paragraphs is $ {count}");
-    }
-    </script> 
+            console.log("The number of paragraphs is " + count);
+    
+            let firstImportantTag = document.querySelector("#tags .important");
+            if (firstImportantTag) {
+                firstImportantTag.innerText += " (Featured)";
+            }
+    
+            let importantElements = document.querySelectorAll(".important");
+            importantElements.forEach(function(element) {
+                element.style.color = "blue";
+            });
+        }
+    </script>
 </body> 
 </html>
