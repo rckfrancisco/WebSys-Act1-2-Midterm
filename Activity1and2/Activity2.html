@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>My Awesome Blog Post</title> 
+    <style> 
+        .important { 
+            font-weight: bold; 
+            color: green; 
+        } 
+        .comment { 
+            border: 1px solid #ccc; 
+            margin-bottom: 10px; 
+            padding: 10px; 
+        } 
+        #main-title { 
+            font-size: 2em; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1 id="main-title">The Wonders of JavaScript</h1> 
+    <p class="post-paragraph">JavaScript is an amazing language that allows for dynamic web 
+development.</p> 
+    <p class="post-paragraph important">One of its key features is the ability to manipulate the 
+DOM.</p> 
+ 
+    <div id="comments-section"> 
+        <h2>Comments</h2> 
+        <div class="comment" data-comment-id="1"> 
+            <p class="comment-author">Alice</p> 
+            <p class="comment-text">Great post!</p> 
+        </div> 
+        <div class="comment"> 
+            <p class="comment-author">Bob</p> 
+            <p class="comment-text important">I learned a lot.</p> 
+        </div> 
+        <ul id="tags"> 
+            <li class="tag">javascript</li> 
+            <li class="tag important">dom</li> 
+            <li class="tag">web development</li> 
+        </ul> 
+    </div> 
+ 
+    <button id="highlight-important" onclick="changeText()">Highlight Important Text</button> 
+ 
+    <script> 
+        function changeText() {
+            document.getElementById("main-title").innerText = "Exploring the Power of DOM Manipulation";
+
+            let paragraphs = document.getElementsClassName("post-paragraph");
+            let count = paragraphs.length;
+            console.log("The number of paragraphs is $ {count}");
+    }
+    </script> 
+</body> 
+</html>
